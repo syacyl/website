@@ -1,0 +1,702 @@
+ @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+article {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 20px 0;
+}
+
+body {
+    background-color: black;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Public Sans', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-family: 'Lilita One';
+    margin: 0;
+}
+
+header p {
+    font-size: 1rem; 
+    font-weight: normal; 
+    margin: 0; 
+}
+
+.menu a.current-page {
+      font-weight: bold;
+      color: #000;
+    }
+
+nav ul li a.current-page {
+    font-weight: bold; /* Makes the current page menu bold */
+}
+
+iframe {
+    aspect-ratio: 16/9;
+    width: 100%;
+}
+
+img {
+    display: block;
+}
+
+nav {
+    background-color: purple;
+    text-align: center;
+}
+
+nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    overflow-x: auto;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 2;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+section h3 {
+    align-self: flex-start;
+    align-items: center;
+}
+
+section img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    width: 50%;
+}
+
+.container {
+    padding: 0 10%;
+}
+
+.jumbotron {
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.menu img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    width: 100%;
+}
+
+.menu p {
+    text-align: center;
+}
+
+.planet {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.planet img {
+    aspect-ratio: 1;
+    min-width: 30%;
+    object-fit: cover;
+    width: 30%;
+}
+
+.planet img {
+    max-width: 100%; /* Ensures image scales within its container */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Removes inline gaps below the image */
+    margin: 0 auto; /* Centers the image within the container */
+}
+
+header.container {
+    display: flex;
+    align-items: center; /* Vertically center everything */
+    justify-content: center; /* Center the title and subtitle */
+    position: relative; /* Allows the logo to be positioned separately */
+}
+
+.logo {
+    position: absolute; /* Position the logo independently */
+    left: 20px; /* Adjust the value to move it closer or further from the left edge */
+    width: 100px; /* Keep the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #000957;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #535C91;
+}
+
+tr:nth-child(odd) {
+    background-color: #917FB3; 
+}
+
+img {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+ .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Slides */
+        .slide {
+            display: none;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+     /* Images */
+.slide img {
+    max-width: 60%; /* Make the images medium-sized */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* To center it horizontally */
+    margin: auto; /* Center the image */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle shadow */
+}
+
+/* Special styling for the first slide */
+.slideshow-container .slide:first-child img {
+    max-width: 50%; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: auto; /* Center the image horizontally */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+/* Special styling for the third slide */
+.slideshow-container .slide:nth-child(3) img {
+    max-width: 50%; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center horizontally */
+    margin: auto; /* Center horizontally */
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+
+
+
+        /* Navigation arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Dots */
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dots span {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .dots .active {
+            background-color: #717171;
+        }
+
+        /* Jumbotron with slideshow overlay */
+        .jumbotron {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: url('./images/galaxy.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .slideshow-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+.toggle-music-btn {
+            position: fixed;
+            top: 170px;
+            left: 20px;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        /* Optional: Add some hover effect for the button */
+        .toggle-music-btn:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+.planet img {
+    animation: float 1s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Move back to original position */
+    }
+}
+
+.sun-img {
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Keeps the image within the container's bounds */
+    display: block; /* Prevents inline shrinking */
+    margin: 0; /* Optional: reset any default margin */
+}
+
+.solar-system-img {
+    animation: moveUpDown 3s ease-in-out infinite;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0); /* Start at original position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move up */
+    }
+    100% {
+        transform: translateY(0); /* Return to original position */
+    }
+}
+
+/* Style for the Solar System menu and its dropdown */
+.solar-system-menu {
+    position: relative;
+}
+
+.planet-options {
+    display: none; /* Hide the planet options initially */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    list-style: none;
+    margin: 0;
+    border: 1px solid #ccc;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.solar-system-menu:hover .planet-options {
+    display: block; /* Show planet options when hovering over the parent menu item */
+}
+
+/* Styling for the links in the dropdown */
+.planet-options li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+}
+
+.planet-options li a:hover {
+    background-color: #ddd;
+}
+
+/* Planet Header Section */
+.planet-header {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.planet-header h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.planet-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.planet-item {
+    position: relative;
+}
+
+.planet-item a {
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.planet-item a:hover {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.planet-item:hover .planet-options {
+    display: block;
+}
+
+/* Styling for the anchor links when hovering over planet names */
+.planet-item a:hover {
+    color: #007bff;
+}
+
+.search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+.img-galaxy {
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+  .galaxy-image {
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Add pop-out effect on hover */
+    .galaxy-image:hover {
+        transform: scale(1.1);  /* Increase the size of the image */
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);  /* Shadow effect */
+    }
+
+.galaxy-link {
+  text-decoration: none; /* Removes the underline */
+  background-color: #8174A0; /* Adds a background color */
+  padding: 5px; /* Adds padding around the title */
+  border-radius: 10px;
+}
+
+.floating-image {
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.description-box {
+    background-color: #f0f0f0; /* Light grey background for contrast */
+    padding: 30px; /* Add padding inside the box */
+    border: 1px solid #ccc; /* Optional: A subtle border */
+    border-radius: 5px; /* Rounded corners for a modern look */
+    margin-top: 10px; /* Add space between the image and the box */
+    font-size: 16px; /* Adjust text size */
+    color: #333; /* Darker text for readability */
+}
+
+.galaxy-header {
+    background-color: #4DA1A9;
+     border-radius: 5px; /* New color for this navigation bar */
+}
+
+.galaxy-header a {
+    color: white; /* Ensure the links stay white */
+    text-decoration: none;
+}
+
+.galaxy-header a:hover {
+    color: lightgray; /* Optional hover effect for links */
+}
+
+/* Navigation link hover effect */
+.nav-link {
+    color: white; /* Default color */
+    text-decoration: none; /* No underline */
+    padding: 5px 10px; /* Optional: Add padding for a clickable area */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.nav-link:hover {
+    color: #FFD700; /* Change text color on hover (gold) */
+    background-color: #1C3A57; /* Add background color on hover (darker blue) */
+    border-radius: 5px; /* Optional: Rounded corners for hover effect */
+    text-decoration: underline; /* Optional: Add underline */
+}
+
+/* Back to Top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    background-color: #2E5077; /* Button background color */
+    color: white; /* Text color */
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 50%; /* Make it circular */
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    transition: opacity 0.3s ease-in-out, transform 0.3s;
+}
+
+/* Hover effect */
+.back-to-top:hover {
+    background-color: #FFD700; /* Hover color */
+    color: #2E5077; /* Hover text color */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Show the button when scrolling */
+.show-button {
+    display: block;
+    opacity: 1;
+}
+
+.navigation-buttons {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    display: flex;
+    gap: 10px; /* Add space between the buttons */
+}
+
+.home-button {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the left */
+    background-color: #2E5077; /* Button background color */
+    color: white; /* Text color */
+    text-decoration: none;
+    padding: 10px 15px; /* Button padding */
+    font-size: 16px; /* Font size */
+    border-radius: 8px; /* Rounded corners */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+
+/* Hover effect */
+.go-back-button:hover, .home-button:hover {
+    background-color: #FFD700; /* Change background color on hover */
+    color: #2E5077; /* Change text color on hover */
+    transform: scale(1.1); /* Slightly enlarge button on hover */
+}
+
+.description-box ol {
+    list-style-type: none; /* Remove default list markers */
+    padding-left: 20px; /* Add some padding to the left */
+}
+
+.description-box li {
+    padding-left: 30px; /* Space between icon and text */
+}
+
+.description-box li i {
+    color: yellow; /* Icon color */
+    font-size: 20px; /* Adjust icon size */
+    margin-right: 10px; /* Space between icon and text */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end position */
+    }
+    50% {
+        transform: translateY(-20px); /* Move the image up */
+    }
+}
+
+.bounce {
+    animation: bounce 1s ease-in-out infinite; /* Repeat the bounce animation */
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Slightly enlarge the image */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite; /* Infinite loop of the pulse effect */
+}
+
+.slide-in {
+    transform: translateX(-100%); /* Start off-screen to the left */
+    transition: transform 1s ease-in-out;
+}
+
+.slide-in-visible {
+    transform: translateX(0); /* Slide to its normal position */
+}
+
+ .zoom-image {
+        width: 45%; /* You can adjust the width as needed */
+        transition: transform 0.3s ease; /* Smooth transition for scaling */
+    }
+
+    /* Zoom-in effect when hovering */
+    .zoom-image:hover {
+        transform: scale(1.2); /* Scale the image to 1.2x when hovered */
+    }
+
+

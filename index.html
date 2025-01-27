@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxara</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Eagle+Lake&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Eagle+Lake&family=Lilita+One&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<div class="search-container">
+    <input type="text" id="searchInput" onkeyup="searchContent()" placeholder="Search for planets or info..." style="padding: 10px; width: 300px; font-size: 16px;">
+</div>
+
+<body onmouseover="startMusic()">
+
+    <!-- Audio element with autoplay -->
+    <audio id="background-music" autoplay loop>
+        <source src="images/beach house.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Header with the logo and the button to toggle music -->
+    <header class="container">
+        <img alt="Logo" src="images/galaxara.jpg" class="logo"/>
+        <div>
+            <h1 style="font-size: 2.5rem; margin: 0;">Galaxara</h1>
+            <p style="font-size: 1rem; font-weight: normal; margin-top: 0;"><marquee>Embracing the vastness of galaxies</marquee></p>
+        </div>   
+
+        <!-- Toggle music button moved to header -->
+        <button class="toggle-music-btn" onclick="toggleMusic()">Sound</button>
+    </header>
+
+    <nav class="container">
+        <ul>
+            <li><a href="./index.html" class="current-page">Home</a></li>
+            <li><a href="./missions.html">Missions</a></li>
+            <li><a href="./overview.html">Overview</a></li>
+            <li><a href="./solar-system.html">The Solar System</a></li>
+            <li><a href="./about-us.html">About Galaxy</a></li>
+        </ul>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="slideshow-container">
+            <div class="slide">
+               <a href="https://spaceplace.nasa.gov/comets/en/" target="_blank">
+                <img src="images/comet.jpg" alt="satellite" class="pulse"/>
+           </a> </div> 
+            <div class="slide">
+                <a href="https://zoom.earth/maps/satellite/" target="_blank">
+                <img src="images/satellite.jpg" alt="Space Image 2" class="pulse">
+          </a>  </div>
+            <div class="slide">
+               <a href="./solar-system.html">
+                <img src="images/planets.jpg" alt="Space Image 3" class="pulse">
+          </a>  </div>
+
+            <!-- Arrows -->
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
+
+    <!-- Dots for navigation -->
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <article class="container">
+        <section>
+            <h2>Featured Videos</h2>
+            <iframe
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube.com/embed/Yla5i5tzXKE" title="YouTube" allowfullscreen>
+            </iframe>
+        </section>
+
+        <section>
+            <h2>Latest Videos</h2>
+            <iframe
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                src="https://www.youtube.com/embed/3KcSnvVYUKc" title="YouTube" allowfullscreen>
+            </iframe>
+        </section>
+    </article>
+
+    <footer>
+        <p>&copy; 2025 Galaxara. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+                dots[i].classList.toggle('active', i === index);
+            });
+        }
+
+        function changeSlide(step) {
+            currentSlideIndex = (currentSlideIndex + step + slides.length) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
+
+        function autoSlide() {
+            if (currentSlideIndex === 1) {
+                // If the second slide, delay for 6 seconds
+                setTimeout(() => {
+                    changeSlide(1);
+                }, 6000);
+            } else {
+                // Default auto-slide interval (3 seconds)
+                changeSlide(1);
+            }
+        }
+
+        // Initialize the slideshow
+        showSlide(currentSlideIndex);
+        setInterval(autoSlide, 3000);
+
+        function toggleMusic() {
+            const music = document.getElementById("background-music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
